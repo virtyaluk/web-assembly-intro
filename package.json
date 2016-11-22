@@ -1,0 +1,30 @@
+{
+  "name": "web-assembly-intro",
+  "version": "0.1.0",
+  "description": "Build Your First Thing With WebAssembly",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/http-server/bin/http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/virtyaluk/web-assembly-intro.git"
+  },
+  "keywords": [
+    "javascript",
+    "webassembly",
+    "wasm",
+    "asm",
+    "llvm"
+  ],
+  "author": "virtydev@yandex.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/virtyaluk/web-assembly-intro/issues"
+  },
+  "homepage": "https://github.com/virtyaluk/web-assembly-intro#readme",
+  "dependencies": {
+    "http-server": "^0.9.0"
+  }
+}
