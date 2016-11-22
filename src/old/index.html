@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Build Your First Thing With WebAssembly</title>
+</head>
+<body>
+	<script>
+		var dependencies = {
+      'global': {},
+      'env': {}
+    };
+    dependencies['global.Math'] = window.Math;
+
+		fetch('example.wasm')
+			.then(response => response.arrayBuffer())
+		  .then(buffer => Wasm.instantiateModule(new Uint8Array(buffer), dependencies))
+		  .then(myMathModule => {
+        console.log(myMathModule.exports.doubleExp);
+        for(var i = 0; i < 5; i++) {
+            console.log(myMathModule.exports.doubleExp(i));
+        }
+	    });
+	</script>
+</body>
+</html>
